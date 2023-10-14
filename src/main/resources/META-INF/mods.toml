@@ -1,0 +1,29 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "CC0-1.0"
+
+[[mods]]
+modId = "foglooksmodernnow"
+version = "${version}"
+displayName = "Fog Looks Modern Now"
+logoFile = "icon.png"
+displayURL = "https://github.com/shizotoaster/foglooksmodernnow"
+description = '''
+Fog Looks Good Now for modern Minecraft versions
+'''
+authors = '''
+
+    * shizotoaster - Updated FLGN to modern MC versions
+'''
+credits = '''
+
+    * mineblock11, Hatsuya - Fabric port authors
+    * CAPPIN - Original Forge mod author
+'''
+
+[[dependencies.foglooksmodernnow]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20,)"
+ordering = "NONE"
+side = "BOTH"

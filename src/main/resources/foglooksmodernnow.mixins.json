@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.shizotoaster.foglooksmodernnow.mixin.client",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "mixins": [
+  ],
+  "client": [
+    "GameRendererMixin",
+    "LevelRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

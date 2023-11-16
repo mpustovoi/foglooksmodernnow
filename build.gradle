@@ -19,6 +19,17 @@ loom {
 }
 
 repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 dependencies {
@@ -27,6 +38,10 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 
     forge "net.minecraftforge:forge:${project.forge_version}"
+
+    // Alex's Caves to test mod compatibility
+    modImplementation "maven.modrinth:citadel:2.4.9"
+    modImplementation "maven.modrinth:alexs-caves:1.0.8"
 }
 
 processResources {

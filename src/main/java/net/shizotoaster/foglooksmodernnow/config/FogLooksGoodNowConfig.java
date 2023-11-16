@@ -32,11 +32,11 @@ public class FogLooksGoodNowConfig {
         private ClientConfig(ForgeConfigSpec.Builder builder) {
             builder.push("Client");
 
-            this.defaultFogStart = builder.comment("Defines the global default fog start value").defineInRange("globalfogstart", 0.0, 0.0, 1.0);
-            this.defaultFogDensity = builder.comment("Defines the global default fog end value, as a percentage of render distance. At 1.0, the fog end is at render distance. At 0, there is no fog").defineInRange("fogend", 1.0, 0.0, 1.0);
+            this.defaultFogStart = builder.comment("Defines the global default fog start value").defineInRange("globalFogStart", 0.0, 0.0, 1.0);
+            this.defaultFogDensity = builder.comment("Defines the global default fog end value, as a percentage of render distance. At 1.0, the fog end is at render distance. At 0, there is no fog").defineInRange("fogEnd", 1.0, 0.0, 1.0);
 
-            this.useCaveFog = builder.comment("Defines if fog will darken and get more dense when underground.").define("usecavefog", true);
-            this.caveFogDensity = builder.comment("Defines the density of fog in caves. If cave fog is active, this will be multiplied with the current fog end.").defineInRange("cavefogdensity", 0.8, 0.0, 1.0);
+            this.useCaveFog = builder.comment("Defines if fog will darken and get more dense when underground.").define("useCaveFog", true);
+            this.caveFogDensity = builder.comment("Defines the density of fog in caves. If cave fog is active, this will be multiplied with the current fog end.").defineInRange("caveFogDensity", 0.8, 0.0, 1.0);
             this.caveFogColor = builder.comment("Defines the color of cave fog, in the decimal color format. If cave fog is active, this will be multiplied with the current fog color.").defineInRange("caveFogColor",  3355443, 0, 16777215);
 
             this.biomeFogs = builder.comment("Defines a specific fog start, fog end, and cave fog end per biome. Entries are comma separated, structured like \"<biomeid>,<fog start>,<fog end>,<cave fog color>\"",

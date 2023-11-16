@@ -30,7 +30,7 @@ public class FogLooksGoodNowConfig {
         public final ForgeConfigSpec.IntValue caveFogColor;
 
         private ClientConfig(ForgeConfigSpec.Builder builder) {
-            builder.push("Client");
+            builder.push("client");
 
             this.defaultFogStart = builder.comment("Defines the global default fog start value").defineInRange("globalFogStart", 0.0, 0.0, 1.0);
             this.defaultFogDensity = builder.comment("Defines the global default fog end value, as a percentage of render distance. At 1.0, the fog end is at render distance. At 0, there is no fog").defineInRange("fogEnd", 1.0, 0.0, 1.0);

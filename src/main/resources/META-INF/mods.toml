@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[1,)"
 license = "CC0-1.0"
 
 [[mods]]
@@ -20,6 +20,9 @@ credits = '''
     * mineblock11, Hatsuya - Fabric port authors
     * CAPPIN - Original Forge mod author
 '''
+
+[[mixins]]
+config = "foglooksmodernnow.mixins.json"
 
 [[dependencies.foglooksmodernnow]]
 modId = "minecraft"

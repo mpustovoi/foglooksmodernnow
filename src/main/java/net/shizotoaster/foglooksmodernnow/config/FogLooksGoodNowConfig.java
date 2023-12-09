@@ -1,7 +1,6 @@
 package net.shizotoaster.foglooksmodernnow.config;
 
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.neoforge.common.ModConfigSpec;
 import net.shizotoaster.foglooksmodernnow.client.FogManager;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -9,27 +8,26 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class FogLooksGoodNowConfig {
-    public static final ForgeConfigSpec config;
+    public static final ModConfigSpec config;
     public static final ClientConfig CLIENT_CONFIG;
 
     static {
-        final Pair<ClientConfig, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(ClientConfig::new);
+        final Pair<ClientConfig, ModConfigSpec> specPair = new ModConfigSpec.Builder().configure(ClientConfig::new);
         config = specPair.getRight();
         CLIENT_CONFIG = specPair.getLeft();
     }
 
     public static class ClientConfig {
-        public final ForgeConfigSpec.ConfigValue<List<? extends String>> biomeFogs;
-        public final ForgeConfigSpec.DoubleValue defaultFogStart;
-        public final ForgeConfigSpec.DoubleValue defaultFogDensity;
+        public final ModConfigSpec.ConfigValue<List<? extends String>> biomeFogs;
+        public final ModConfigSpec.DoubleValue defaultFogStart;
+        public final ModConfigSpec.DoubleValue defaultFogDensity;
 
-        public final ForgeConfigSpec.BooleanValue useCaveFog;
-        public final ForgeConfigSpec.DoubleValue caveFogDensity;
-        public final ForgeConfigSpec.IntValue caveFogColor;
+        public final ModConfigSpec.BooleanValue useCaveFog;
+        public final ModConfigSpec.DoubleValue caveFogDensity;
+        public final ModConfigSpec.IntValue caveFogColor;
 
-        private ClientConfig(ForgeConfigSpec.Builder builder) {
+        private ClientConfig(ModConfigSpec.Builder builder) {
             builder.push("client");
 
             this.defaultFogStart = builder.comment("Defines the global default fog start value").defineInRange("globalFogStart", 0.0, 0.0, 1.0);

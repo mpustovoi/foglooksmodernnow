@@ -6,11 +6,12 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
+import net.shizotoaster.foglooksmodernnow.compat.IrisShadersCompat;
 import org.joml.Matrix4f;
 
 public class FoggySkyRenderer {
     public static void renderSky(ClientWorld level, float partialTick, MatrixStack poseStack, Camera camera, Matrix4f projectionMatrix, boolean isFoggy, Runnable setupFog) {
-        if (FogManager.shouldRenderCaveFog()) {
+        if (FogManager.shouldRenderCaveFog() && !IrisShadersCompat.isUsingShaders()) {
             FogManager densityManager = FogManager.getDensityManager();
 
             Vec3d fogColor = FogManager.getCaveFogColor();

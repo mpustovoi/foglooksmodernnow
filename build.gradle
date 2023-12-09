@@ -42,6 +42,9 @@ dependencies {
     // Alex's Caves to test mod compatibility
     modImplementation "maven.modrinth:citadel:2.4.9"
     modImplementation "maven.modrinth:alexs-caves:1.0.8"
+
+    // Iris sun bug fix test
+    modImplementation "maven.modrinth:oculus:1.20.1-1.6.9"
 }
 
 processResources {

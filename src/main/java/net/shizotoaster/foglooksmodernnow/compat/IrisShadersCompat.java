@@ -5,7 +5,7 @@ import net.neoforged.fml.ModList;
 
 public class IrisShadersCompat {
     public static boolean isUsingShaders() {
-        if (ModList.get().isLoaded("iris")) {
+        if (ModList.get().isLoaded("oculus") || ModList.get().isLoaded("iris")) {
             return  IrisApi.getInstance().isShaderPackInUse();
         }
         return false;
